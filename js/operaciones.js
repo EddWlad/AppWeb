@@ -8,6 +8,9 @@ mostrarFormularioEB03 = function()
     mostrarComponente("forms");
     mostrarComponente("formsGrupos1");
     mostrarComponente("Eb03");
+    ocultarComponente("Eb05");
+    ocultarComponente("Eb06");
+    ocultarComponente("formsGrupos2");
 }
 
 mostrarFormularioEB05 = function()

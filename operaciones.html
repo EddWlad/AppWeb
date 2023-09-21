@@ -117,9 +117,9 @@
                                 <table>
                                     <tr>
                                         <td><label for="upgrade" class="form__labeltip">Upgrade</label></td>
-                                        <td class="tdradio"><input type="radio" id="Upgrade" class="form__radio" placeholder=" "></td>
+                                        <td class="tdradio"><input type="radio" id="Upgrade" class="form__radio" name="upgrade" /></td>
                                         <td><label for="inst__new" class="form__labeltip">Instalacion nueva</label></td>
-                                        <td class="tdradio"><input type="radio" id="inst__new" class="form__radio" placeholder=" "/></td>
+                                        <td class="tdradio"><input type="radio" id="inst__new" class="form__radio" name="upgrade" /></td>
                                     </tr>
                                 </table>  
                             </div>
@@ -128,7 +128,7 @@
                                         <table>
                                             <tr >
                                                 <td><label for="garantia__inst" class="form__labeltip1">Garantia de instalacion</label></td>
-                                                <td class="tdradio"><input type="radio" id="garantia__inst" class="form__radio1" placeholder=" "/></td>
+                                                <td class="tdradio"><input type="radio" id="garantia__inst" class="form__radio1" name="garantias"/></td>
                                             </tr>
                                         </table>  
                                     </div>
@@ -137,7 +137,7 @@
                                         <table>
                                             <tr>
                                                 <td><label for="garantia__mant" class="form__labeltip1">Garantia de mantenimiento</label></td>
-                                                <td class="tdradio"><input type="radio" id="garantia__mant" class="form__radio2" placeholder=" "/></td>
+                                                <td class="tdradio"><input type="radio" id="garantia__mant" class="form__radio2" name="garantias"/></td>
                                             </tr>
                                         </table>  
                                     </div>
@@ -146,7 +146,7 @@
                                         <table>
                                             <tr>
                                                 <td><label for="mantenimiento" class="form__labeltip1">Mantenimiento</label></td>
-                                                <td class="tdradio"><input type="radio" id="mantenimiento" class="form__radio3" placeholder=" "/></td>
+                                                <td class="tdradio"><input type="radio" id="mantenimiento" class="form__radio3" name="garantias"/></td>
                                             </tr>
                                         </table>
                                     </div>
@@ -177,12 +177,12 @@
                             <div class="form__option">
                                 <img src="./images/huawei.svg" alt="imagen de huawei" class="form__icon">
                                 <label for="huawei" class="form__labelm">Huawei </label>
-                                <input type="radio" id="huawei" class="form__radiom" placeholder=" ">
+                                <input type="radio" id="huawei" class="form__radiom" name="marca"/>
                             </div>
                             <div class="form__option">
                                 <img src="./images/zte.svg" alt="imagen de ZTE" class="form__icon">
                                 <label for="zte" class="form__labelm"></label>
-                                <input type="radio" id="zte" class="form__radiom" placeholder=" ">
+                                <input type="radio" id="zte" class="form__radiom" name="marca"/>
                             </div>
                         </div>
                         <span class="form__tipp"></span>
@@ -190,21 +190,21 @@
                         <span class="form__titles"> <img src="./images/plan.svg" alt="imagen para referenciar a tipo de instalacion" class="form__icon">Plan</span>
                         <div class="form__plan">
                             <label for="1plan" class="form__labelp">1 Play</label>
-                            <input type="radio" id="1plan" class="form__radiop" placeholder=" ">
+                            <input type="radio" id="1plan" class="form__radiop" name="plan"/>
                             <label for="2plan" class="form__labelp">2 Play</label>
-                            <input type="radio" id="2plan" class="form__radiop" placeholder=" ">
+                            <input type="radio" id="2plan" class="form__radiop" name="plan"/>
                             <label for="3plan" class="form__labelp">3 Play</label>
-                            <input type="radio" id="3plan" class="form__radiop" placeholder=" ">
+                            <input type="radio" id="3plan" class="form__radiop" name="plan"/>
                         </div>
                         <span class="form__tipp"></span>
                         <span class="form__titles"> <img src="./images/cable.svg" alt="imagen para referenciar cable" class="form__icon">Cable</span>
                         <div class="form__cable">
                             <label for="50mts" class="form__labelc">50 metros</label>
-                            <input type="radio" id="50mts" class="form__radioc" placeholder=" ">
+                            <input type="radio" id="50mts" class="form__radioc" name="cable"/>
                             <label for="80mts" class="form__labelc">80 metros</label>
-                            <input type="radio" id="80mts" class="form__radioc" placeholder=" ">
+                            <input type="radio" id="80mts" class="form__radioc" name="cable"/>
                             <label for="100mts" class="form__labelc">100 metros</label>
-                            <input type="radio" id="100mts" class="form__radioc" placeholder=" ">
+                            <input type="radio" id="100mts" class="form__radioc" name="cable"/>
                         </div>
                         <div class="form__materiales">
                             <span class="form__oks"><img src="./images/materiales.svg" alt="imagen para referenciar materiales" class="form__icon">Materiales</span>
@@ -229,9 +229,9 @@
                             <span class="form__titles"><img src="./images/iptvott.svg" alt="imagen para referenciar a iptv o ott" class="form__icon">Tipo</span>
                             <div class="form__tip">
                                 <label for="OTT" class="form__labelt">OTT</label>
-                                <input type="radio" id="OTT" class="form__radiot" placeholder=" ">
+                                <input type="radio" id="OTT" class="form__radiot" name="tip"/>
                                 <label for="IPTV" class="form__labelt">IPTV</label>
-                                <input type="radio" id="IPTV" class="form__radiot" placeholder=" ">
+                                <input type="radio" id="IPTV" class="form__radiot" name="tip"/>
                             </div>
                             <div class="form__datoseries">
                                 <label for="deco1" class="form__label2">Decodificador 1:</label>
@@ -304,11 +304,11 @@
                                 <tr>
                                     <td><img src="./images/satisfecho.svg" alt="imagen para observacion" class="form__iconSatis"/></td>
                                     <td><label for="satisfecho" class="form__label">Satisfecho</label></td>
-                                    <td><input type="radio" id="satisfecho" class="form__checks" placeholder=" "/></td>
+                                    <td><input type="radio" id="satisfecho" class="form__checks" name="satisfaccion"/></td>
                                     
                                     <td><img src="./images/insatisfecho.svg" alt="imagen para observacion" class="form__iconSatisf"></td>
                                     <td><label for="insatisfecho" class="form__columSatisfaccion1">Insatisfecho</label></td>
-                                    <td><input type="radio" id="insatisfecho" class="form__checks" placeholder=" "/></td>
+                                    <td><input type="radio" id="insatisfecho" class="form__checks" name="satisfaccion"/></td>
                                 </tr>
                             </table> 
                         </div>
