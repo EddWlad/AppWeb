@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,600&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: #eaebef;
+    font-family: 'Poppins', sans-serif;
+}
+.nav
+{
+    width: 240px;
+}
+.nav__link
+{
+   color: #303440;
+   display: block;
+   padding: 15px 0; 
+   text-decoration: none;
+}
+
+.nav__link--inside
+{
+    border-radius: 6px;
+    padding: 10px;
+    text-align: left;
+    font-size: 11px;
+    /*overflow-y: auto;*/
+}
+.nav__link--inside:hover
+{
+    background: #f6f8fa;
+}
+.list
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0 16px 16px 0;
+    background: #fff;
+}
+
+/*.form__container form .user__details
+    {
+        max-height: 300px;
+        overflow-y: scroll;
+    }*/
+
+.list__item
+{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.list__icon
+{
+    display: inline-block;
+    margin-left: 0;
+    margin-top: -20px;
+    margin-bottom: -6px;
+    margin-right: 5px;
+    width: 21px;
+
+}
+.list__item--click
+{
+    cursor: pointer;
+
+}
+.list__button
+{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 70%;
+    margin: 0 auto;
+}
+/* Estilo para ocultar los formularios por defecto 
+.form__container {
+    display: none;
+}
+
+/* Estilo para los formularios y el botón de cerrar 
+.group__form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.close__button {
+    margin-top: 10px;
+}
+*/
+.arrow .list__arrow
+{
+    transform: rotate(90deg);
+}
+.list__arrow
+{
+    margin-left: auto;
+    transition: transform .3s;
+}
+.list__show
+{
+    width: 80%;
+    margin-left: auto;
+    border-left: 2px solid #303440;
+    list-style: none;
+    transition: height .4s;
+    height: 0;
+}

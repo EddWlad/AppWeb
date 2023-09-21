@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="shortcut icon" href="./images/opecla.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/estilos_op.css">
+    <link rel="stylesheet" href="./css/estilos__pruebas.css">
+    <title>Operaciones</title>
+</head>
+<body onload="mostrarOperaciones();">
+<div class="operaciones__container">
+    <nav class="nav">
+        <ul class="list">
+    
+            <li class="list__item">
+                <div class="list__button">
+                    <img src="./images/inicio.svg" alt="icono de incio" class="list__img">
+                    <a href="./index.html" class="nav__link">Inicio</a>
+                </div>   
+            </li>
+    
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                    <img src="./images/group.svg" alt="icono del grupo" class="list__img">
+                    <a href="#" class="nav__link">Grupos</a>
+                    <img src="./images/arrow.svg" alt="flecha de despliegue" class="list__arrow">                
+                </div>
+    
+                <ul class="list__show">
+                        <li class="list__inside">
+                        
+                            <a href="#" class="nav__link nav__link--inside" onclick="mostrarFormularioEB03();"><img src="./images/tecnico.svg" alt="icono de incio" class="list__icon">UIO - CLARO EB03</a>
+                        </li>
+    
+                        <li class="list__inside">
+                            
+                            <a href="#" class="nav__link nav__link--inside"><img src="./images/tecnico.svg" alt="icono de incio" class="list__icon">UIO - CLARO EB05</a>  
+                        </li>
+    
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside" onclick="mostrarFormularioEB06();"><img src="./images/tecnico.svg" alt="icono de incio" class="list__icon">UIO - CLARO EB06</a>
+                        </li>
+    
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside"><img src="./images/tecnico.svg" alt="icono de incio" class="list__icon">UIO - CLARO EB07</a>
+                        </li>
+                        <li class="list__inside">
+    
+                            <a href="#" class="nav__link nav__link--inside"><img src="./images/tecnico.svg" alt="icono de incio" class="list__icon">UIO - CLARO EB10</a>
+                        </li>
+                        <li class="list__inside">
+    
+                            <a href="#" class="nav__link nav__link--inside"><img src="./images/tecnico.svg" alt="icono de incio" class="list__icon">UIO - CLARO EB11</a>
+                        </li>
+                        <li class="list__inside">
+    
+                            <a href="#" class="nav__link nav__link--inside"><img src="./images/tecnico.svg" alt="icono de incio" class="list__icon">UIO - CLARO EB19</a>
+                        </li>
+                        <li class="list__inside">
+    
+                            <a href="#" class="nav__link nav__link--inside"><img src="./images/tecnico.svg" alt="icono de incio" class="list__icon">UIO - CLARO EB31</a>
+                        </li>
+                        <li class="list__inside">
+    
+                            <a href="#" class="nav__link nav__link--inside"><img src="./images/tecnico.svg" alt="icono de incio" class="list__icon">UIO - CLARO EB32</a>
+                        </li>
+                        <li class="list__inside">
+    
+                            <a href="#" class="nav__link nav__link--inside"><img src="./images/tecnico.svg" alt="icono de incio" class="list__icon">UIO - CLARO EB40</a>
+                        </li>
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside"><img src="./images/tecnico.svg" alt="icono de incio" class="list__icon">UIO - CLARO EB45</a>
+                        </li>
+                </ul>
+            </li>
+    
+            <li class="list__item">
+                <div class="list__button">
+                    <img src="./images/edit.svg" alt="icono de editar orden" class="list__img">
+                    <a href="#" class="nav__link">Editar</a>
+                </div>   
+            </li>
+    
+            <li class="list__item">
+                <div class="list__button">
+                    <img src="./images/delete.svg" alt="icono de borrar orden" class="list__img">
+                    <a href="#" class="nav__link">Borrar</a>
+                </div>   
+            </li>
+    
+            <li class="list__item">
+                <div class="list__button">
+                    <img src="./images/inf.svg" alt="icono de borrar orden" class="list__img">
+                    <a href="#" class="nav__link">Informes</a>
+                </div>   
+            </li>
+        </ul>
+    </nav>
+
+    <div class="forms__columnas" id="forms">
+
+        <div class="forms__rows" id="formsGrupos1">
+
+            <div class="operacion__container" id="Eb03"> 
+                <form class="form">
+                    <img src="./images/cerrar.svg" class="form__iconClose" alt="imagen cerrar formulario">
+                    <h2 class="from__title">Formulario de Instalacion/Postventas</h2>
+                    <p class="form__paragraph">Llene con cuidado el formulario<span class="grupos">EB03</span></p>
+                    <span class="form__tit"></span>
+                    <div class="form__client">          
+                        <span class="form__titles"><img src="./images/tipo.svg" alt="imagen para referenciar a tipo de instalacion" class="form__icon">Tipo de orden</span>
+                        <div class="form__tipo">
+                            <label for="instalacion" class="form__labeltipo"><img src="./images/instalacion.svg" alt="imagen para instalacion" class="form__icon"><p class="parrafo">Instalacion</p></label>
+                            <div class="instalacion__tip">
+                                <table>
+                                    <tr>
+                                        <td><label for="upgrade" class="form__labeltip">Upgrade</label></td>
+                                        <td class="tdradio"><input type="radio" id="Upgrade" class="form__radio" placeholder=" "></td>
+                                        <td><label for="inst__new" class="form__labeltip">Instalacion nueva</label></td>
+                                        <td class="tdradio"><input type="radio" id="inst__new" class="form__radio" placeholder=" "/></td>
+                                    </tr>
+                                </table>  
+                            </div>
+                            <label for="postventa" class="form__labeltipo"><img src="./images/postventa.svg" alt="imagen para postventa" class="form__icon"><p class="parrafo">Postventa</p></label>
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr >
+                                                <td><label for="garantia__inst" class="form__labeltip1">Garantia de instalacion</label></td>
+                                                <td class="tdradio"><input type="radio" id="garantia__inst" class="form__radio1" placeholder=" "/></td>
+                                            </tr>
+                                        </table>  
+                                    </div>
+            
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr>
+                                                <td><label for="garantia__mant" class="form__labeltip1">Garantia de mantenimiento</label></td>
+                                                <td class="tdradio"><input type="radio" id="garantia__mant" class="form__radio2" placeholder=" "/></td>
+                                            </tr>
+                                        </table>  
+                                    </div>
+            
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr>
+                                                <td><label for="mantenimiento" class="form__labeltip1">Mantenimiento</label></td>
+                                                <td class="tdradio"><input type="radio" id="mantenimiento" class="form__radio3" placeholder=" "/></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+            
+                        <span class="form__tipp"></span>  
+                        </div>
+                     
+            
+                        <span class="form__titles"> <img src="./images/client.svg" alt="imagen para referenciar a datos para el cliente" class="form__icon">Datos de la orden</span>
+                        <div class="form__datorden">
+                            <label for="proyect" class="form__labeldat">OT:</label>
+                            <input type="text" id="proyect" class="form__proyect" placeholder=" ">
+                            <label for="crm" class="form__labeldat">CRM:</label>
+                            <input type="text" id="crm" class="form__proyect" placeholder=" ">
+                            <label for="name" class="form__labeldat">Nombre de cliente:</label>
+                            <input type="text" id="name" class="form__proyect" placeholder=" ">
+                        </div>
+                        <div class="form__datorden">
+                            <label for="cluster" class="form__labeldat">Cluster:</label>
+                            <input type="text" id="cluster" class="form__proyect" placeholder=" ">
+                            <label for="coordenada" class="form__labeldat">Coordenadas:</label>
+                            <input type="text" id="coordenada" class="form__proyect" placeholder=" ">
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"><img src="./images/marca.svg" alt="imagen para referenciar marca" class="form__icon">Marca</span>   
+                        <div class="form__marca">
+                            <div class="form__option">
+                                <img src="./images/huawei.svg" alt="imagen de huawei" class="form__icon">
+                                <label for="huawei" class="form__labelm">Huawei </label>
+                                <input type="radio" id="huawei" class="form__radiom" placeholder=" ">
+                            </div>
+                            <div class="form__option">
+                                <img src="./images/zte.svg" alt="imagen de ZTE" class="form__icon">
+                                <label for="zte" class="form__labelm"></label>
+                                <input type="radio" id="zte" class="form__radiom" placeholder=" ">
+                            </div>
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"> <img src="./images/plan.svg" alt="imagen para referenciar a tipo de instalacion" class="form__icon">Plan</span>
+                        <div class="form__plan">
+                            <label for="1plan" class="form__labelp">1 Play</label>
+                            <input type="radio" id="1plan" class="form__radiop" placeholder=" ">
+                            <label for="2plan" class="form__labelp">2 Play</label>
+                            <input type="radio" id="2plan" class="form__radiop" placeholder=" ">
+                            <label for="3plan" class="form__labelp">3 Play</label>
+                            <input type="radio" id="3plan" class="form__radiop" placeholder=" ">
+                        </div>
+                        <span class="form__tipp"></span>
+                        <span class="form__titles"> <img src="./images/cable.svg" alt="imagen para referenciar cable" class="form__icon">Cable</span>
+                        <div class="form__cable">
+                            <label for="50mts" class="form__labelc">50 metros</label>
+                            <input type="radio" id="50mts" class="form__radioc" placeholder=" ">
+                            <label for="80mts" class="form__labelc">80 metros</label>
+                            <input type="radio" id="80mts" class="form__radioc" placeholder=" ">
+                            <label for="100mts" class="form__labelc">100 metros</label>
+                            <input type="radio" id="100mts" class="form__radioc" placeholder=" ">
+                        </div>
+                        <div class="form__materiales">
+                            <span class="form__oks"><img src="./images/materiales.svg" alt="imagen para referenciar materiales" class="form__icon">Materiales</span>
+                            <input type="checkbox" id="ok" class="form__check" placeholder=" ">
+                            <label for="ok" class="form__labelmm">OK</label>
+                        </div>
+                        <span class="form__tipp"></span>
+                        
+                        <span class="form__titles"><img src="./images/equipos.svg" alt="imagen para equipos" class="form__icon">Equipos de instalacion</span>
+                        <div class="form__equipos">
+                            <label for="nontel" class="form__labele1"><img src="./images/nontele.svg" alt="imagen para sin telefono" class="form__iconEq">Sin telefono</label>
+                            <input type="checkbox" id="nontel" class="form__check" placeholder=" ">
+                            <div class="form__datoseries">
+                                <label for="telefono" class="form__labele1"><img src="./images/telefono.svg" alt="imagen para referenciar a telefono" class="form__iconTel">Serie de telefono:</label>
+                                <input type="text" id="telefono" class="form__series" placeholder=" ">
+                                <label for="onth" class="form__labele1">Serie ONT Huawei:</label>
+                                <input type="text" id="onth" class="form__series" placeholder=" ">
+                                <label for="ontz" class="form__labele1">Serie ONT ZTE:</label>
+                                <input type="text" id="ontz" class="form__series" placeholder=" ">
+                                <span class="form__line"></span>
+                            </div>
+                            <span class="form__titles"><img src="./images/iptvott.svg" alt="imagen para referenciar a iptv o ott" class="form__icon">Tipo</span>
+                            <div class="form__tip">
+                                <label for="OTT" class="form__labelt">OTT</label>
+                                <input type="radio" id="OTT" class="form__radiot" placeholder=" ">
+                                <label for="IPTV" class="form__labelt">IPTV</label>
+                                <input type="radio" id="IPTV" class="form__radiot" placeholder=" ">
+                            </div>
+                            <div class="form__datoseries">
+                                <label for="deco1" class="form__label2">Decodificador 1:</label>
+                                <input type="text" id="deco1" class="form__series" placeholder=" ">
+                                <label for="deco2" class="form__label2">Decodificador 2:</label>
+                                <input type="text" id="deco2" class="form__series" placeholder=" ">
+                                <label for="deco3" class="form__label2">Decodificador 3:</label>
+                                <input type="text" id="deco3" class="form__series" placeholder=" ">
+                            </div>
+            
+                            <div class="form__materialesIP">
+                                <span class="form__oks1"><img src="./images/materiales.svg" alt="imagen para referenciar materiales" class="form__icon">Materiales de IPTV</span>
+                                <input type="checkbox" id="ok" class="form__check1" placeholder=" ">
+                                <label for="ok" class="form__label">OK</label>
+                            </div>
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"> <img src="./images/extras.svg" alt="imagen para extras" class="form__icon">Materiales extras/postventa</span>
+                        <div class="form__matextra">
+                            <table class="form__datoextra">
+                                <tr>
+                                    <td><label for="conector" class="form__labeld">Conecotr SC/APC</label></td>
+                                    <td><input type="checkbox" id="conector" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="patchcord" class="form__labeld">Patchcord SC/APC</label></td>
+                                    <td><input type="checkbox" id="patchcord" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="roseta" class="form__labeld">ATB Roseta optica</label></td>
+                                    <td><input type="checkbox" id="roseta" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="precinto" class="form__labeld">Precinto rojo</label></td>
+                                    <td><input type="checkbox" id="precinto" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="50mts" class="form__labeld">Cable de 50mts</label></td>
+                                    <td><input type="checkbox" id="50mts" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="80mts" class="form__labeld">Cable de 80mts</label></td>
+                                    <td><input type="checkbox" id="80mts" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="100mts" class="form__labeld">Cable de 100mts</label></td>
+                                    <td><input type="checkbox" id="100mts" class="form__checkd" placeholder=" "></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="control" class="form__labeld">Control IPTV</label></td>
+                                    <td><input type="checkbox" id="control" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="conect" class="form__labeld">Conector RJ45</label></td>
+                                    <td><input type="checkbox" id="conect" class="form__checkd" placeholder=" "></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="form__tipp"></span>
+                        <div class="form__observaciones">
+                            <label for="observacion" class="form__label"><img src="./images/observacion.svg" alt="imagen para observacion" class="form__icon">Observaciones:</label>
+                            <textarea id="observacion" class="form__txtObservaciones" placeholder=" "></textarea>
+                            <span class="form__line"></span>
+                        </div>
+            
+                        <span class="form__titles">Cliente:</span>
+                        <div class="form__satisfaccion">
+                            <table>
+                                <tr>
+                                    <td><img src="./images/satisfecho.svg" alt="imagen para observacion" class="form__iconSatis"/></td>
+                                    <td><label for="satisfecho" class="form__label">Satisfecho</label></td>
+                                    <td><input type="radio" id="satisfecho" class="form__checks" placeholder=" "/></td>
+                                    
+                                    <td><img src="./images/insatisfecho.svg" alt="imagen para observacion" class="form__iconSatisf"></td>
+                                    <td><label for="insatisfecho" class="form__columSatisfaccion1">Insatisfecho</label></td>
+                                    <td><input type="radio" id="insatisfecho" class="form__checks" placeholder=" "/></td>
+                                </tr>
+                            </table> 
+                        </div>
+                        <div class="buttons">
+                            <input type="submit" class="form__submit" value="Guardar">
+                            <input type="submit" class="form__submit" value="Pendiente">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="operacion__container" id="Eb05"> 
+                <form class="form">
+                    <img src="./images/cerrar.svg" class="form__iconClose" alt="imagen cerrar formulario">
+                    <h2 class="from__title">Formulario de Instalacion/Postventas</h2>
+                    <p class="form__paragraph">Llene con cuidado el formulario<span class="grupos">EB05</span></p>
+                    <span class="form__tit"></span>
+                    <div class="form__client">          
+                        <span class="form__titles"><img src="./images/tipo.svg" alt="imagen para referenciar a tipo de instalacion" class="form__icon">Tipo de orden</span>
+                        <div class="form__tipo">
+                            <label for="instalacion" class="form__labeltipo"><img src="./images/instalacion.svg" alt="imagen para instalacion" class="form__icon"><p class="parrafo">Instalacion</p></label>
+                            <div class="instalacion__tip">
+                                <table>
+                                    <tr>
+                                        <td><label for="upgrade" class="form__labeltip">Upgrade</label></td>
+                                        <td class="tdradio"><input type="radio" id="Upgrade" class="form__radio" placeholder=" "></td>
+                                        <td><label for="inst__new" class="form__labeltip">Instalacion nueva</label></td>
+                                        <td class="tdradio"><input type="radio" id="inst__new" class="form__radio" placeholder=" "/></td>
+                                    </tr>
+                                </table>  
+                            </div>
+                            <label for="postventa" class="form__labeltipo"><img src="./images/postventa.svg" alt="imagen para postventa" class="form__icon"><p class="parrafo">Postventa</p></label>
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr >
+                                                <td><label for="garantia__inst" class="form__labeltip1">Garantia de instalacion</label></td>
+                                                <td class="tdradio"><input type="radio" id="garantia__inst" class="form__radio1" placeholder=" "/></td>
+                                            </tr>
+                                        </table>  
+                                    </div>
+            
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr>
+                                                <td><label for="garantia__mant" class="form__labeltip1">Garantia de mantenimiento</label></td>
+                                                <td class="tdradio"><input type="radio" id="garantia__mant" class="form__radio2" placeholder=" "/></td>
+                                            </tr>
+                                        </table>  
+                                    </div>
+            
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr>
+                                                <td><label for="mantenimiento" class="form__labeltip1">Mantenimiento</label></td>
+                                                <td class="tdradio"><input type="radio" id="mantenimiento" class="form__radio3" placeholder=" "/></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+            
+                        <span class="form__tipp"></span>  
+                        </div>
+                     
+            
+                        <span class="form__titles"> <img src="./images/client.svg" alt="imagen para referenciar a datos para el cliente" class="form__icon">Datos de la orden</span>
+                        <div class="form__datorden">
+                            <label for="proyect" class="form__labeldat">OT:</label>
+                            <input type="text" id="proyect" class="form__proyect" placeholder=" ">
+                            <label for="crm" class="form__labeldat">CRM:</label>
+                            <input type="text" id="crm" class="form__proyect" placeholder=" ">
+                            <label for="name" class="form__labeldat">Nombre de cliente:</label>
+                            <input type="text" id="name" class="form__proyect" placeholder=" ">
+                        </div>
+                        <div class="form__datorden">
+                            <label for="cluster" class="form__labeldat">Cluster:</label>
+                            <input type="text" id="cluster" class="form__proyect" placeholder=" ">
+                            <label for="coordenada" class="form__labeldat">Coordenadas:</label>
+                            <input type="text" id="coordenada" class="form__proyect" placeholder=" ">
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"><img src="./images/marca.svg" alt="imagen para referenciar marca" class="form__icon">Marca</span>   
+                        <div class="form__marca">
+                            <div class="form__option">
+                                <img src="./images/huawei.svg" alt="imagen de huawei" class="form__icon">
+                                <label for="huawei" class="form__labelm">Huawei </label>
+                                <input type="radio" id="huawei" class="form__radiom" placeholder=" ">
+                            </div>
+                            <div class="form__option">
+                                <img src="./images/zte.svg" alt="imagen de ZTE" class="form__icon">
+                                <label for="zte" class="form__labelm"></label>
+                                <input type="radio" id="zte" class="form__radiom" placeholder=" ">
+                            </div>
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"> <img src="./images/plan.svg" alt="imagen para referenciar a tipo de instalacion" class="form__icon">Plan</span>
+                        <div class="form__plan">
+                            <label for="1plan" class="form__labelp">1 Play</label>
+                            <input type="radio" id="1plan" class="form__radiop" placeholder=" ">
+                            <label for="2plan" class="form__labelp">2 Play</label>
+                            <input type="radio" id="2plan" class="form__radiop" placeholder=" ">
+                            <label for="3plan" class="form__labelp">3 Play</label>
+                            <input type="radio" id="3plan" class="form__radiop" placeholder=" ">
+                        </div>
+                        <span class="form__tipp"></span>
+                        <span class="form__titles"> <img src="./images/cable.svg" alt="imagen para referenciar cable" class="form__icon">Cable</span>
+                        <div class="form__cable">
+                            <label for="50mts" class="form__labelc">50 metros</label>
+                            <input type="radio" id="50mts" class="form__radioc" placeholder=" ">
+                            <label for="80mts" class="form__labelc">80 metros</label>
+                            <input type="radio" id="80mts" class="form__radioc" placeholder=" ">
+                            <label for="100mts" class="form__labelc">100 metros</label>
+                            <input type="radio" id="100mts" class="form__radioc" placeholder=" ">
+                        </div>
+                        <div class="form__materiales">
+                            <span class="form__oks"><img src="./images/materiales.svg" alt="imagen para referenciar materiales" class="form__icon">Materiales</span>
+                            <input type="checkbox" id="ok" class="form__check" placeholder=" ">
+                            <label for="ok" class="form__labelmm">OK</label>
+                        </div>
+                        <span class="form__tipp"></span>
+                        
+                        <span class="form__titles"><img src="./images/equipos.svg" alt="imagen para equipos" class="form__icon">Equipos de instalacion</span>
+                        <div class="form__equipos">
+                            <label for="nontel" class="form__labele1"><img src="./images/nontele.svg" alt="imagen para sin telefono" class="form__iconEq">Sin telefono</label>
+                            <input type="checkbox" id="nontel" class="form__check" placeholder=" ">
+                            <div class="form__datoseries">
+                                <label for="telefono" class="form__labele1"><img src="./images/telefono.svg" alt="imagen para referenciar a telefono" class="form__iconTel">Serie de telefono:</label>
+                                <input type="text" id="telefono" class="form__series" placeholder=" ">
+                                <label for="onth" class="form__labele1">Serie ONT Huawei:</label>
+                                <input type="text" id="onth" class="form__series" placeholder=" ">
+                                <label for="ontz" class="form__labele1">Serie ONT ZTE:</label>
+                                <input type="text" id="ontz" class="form__series" placeholder=" ">
+                                <span class="form__line"></span>
+                            </div>
+                            <span class="form__titles"><img src="./images/iptvott.svg" alt="imagen para referenciar a iptv o ott" class="form__icon">Tipo</span>
+                            <div class="form__tip">
+                                <label for="OTT" class="form__labelt">OTT</label>
+                                <input type="radio" id="OTT" class="form__radiot" placeholder=" ">
+                                <label for="IPTV" class="form__labelt">IPTV</label>
+                                <input type="radio" id="IPTV" class="form__radiot" placeholder=" ">
+                            </div>
+                            <div class="form__datoseries">
+                                <label for="deco1" class="form__label2">Decodificador 1:</label>
+                                <input type="text" id="deco1" class="form__series" placeholder=" ">
+                                <label for="deco2" class="form__label2">Decodificador 2:</label>
+                                <input type="text" id="deco2" class="form__series" placeholder=" ">
+                                <label for="deco3" class="form__label2">Decodificador 3:</label>
+                                <input type="text" id="deco3" class="form__series" placeholder=" ">
+                            </div>
+            
+                            <div class="form__materialesIP">
+                                <span class="form__oks1"><img src="./images/materiales.svg" alt="imagen para referenciar materiales" class="form__icon">Materiales de IPTV</span>
+                                <input type="checkbox" id="ok" class="form__check1" placeholder=" ">
+                                <label for="ok" class="form__label">OK</label>
+                            </div>
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"> <img src="./images/extras.svg" alt="imagen para extras" class="form__icon">Materiales extras/postventa</span>
+                        <div class="form__matextra">
+                            <table class="form__datoextra">
+                                <tr>
+                                    <td><label for="conector" class="form__labeld">Conecotr SC/APC</label></td>
+                                    <td><input type="checkbox" id="conector" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="patchcord" class="form__labeld">Patchcord SC/APC</label></td>
+                                    <td><input type="checkbox" id="patchcord" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="roseta" class="form__labeld">ATB Roseta optica</label></td>
+                                    <td><input type="checkbox" id="roseta" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="precinto" class="form__labeld">Precinto rojo</label></td>
+                                    <td><input type="checkbox" id="precinto" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="50mts" class="form__labeld">Cable de 50mts</label></td>
+                                    <td><input type="checkbox" id="50mts" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="80mts" class="form__labeld">Cable de 80mts</label></td>
+                                    <td><input type="checkbox" id="80mts" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="100mts" class="form__labeld">Cable de 100mts</label></td>
+                                    <td><input type="checkbox" id="100mts" class="form__checkd" placeholder=" "></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="control" class="form__labeld">Control IPTV</label></td>
+                                    <td><input type="checkbox" id="control" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="conect" class="form__labeld">Conector RJ45</label></td>
+                                    <td><input type="checkbox" id="conect" class="form__checkd" placeholder=" "></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="form__tipp"></span>
+                        <div class="form__observaciones">
+                            <label for="observacion" class="form__label"><img src="./images/observacion.svg" alt="imagen para observacion" class="form__icon">Observaciones:</label>
+                            <textarea id="observacion" class="form__txtObservaciones" placeholder=" "></textarea>
+                            <span class="form__line"></span>
+                        </div>
+            
+                        <span class="form__titles">Cliente:</span>
+                        <div class="form__satisfaccion">
+                            <table>
+                                <tr>
+                                    <td><img src="./images/satisfecho.svg" alt="imagen para observacion" class="form__iconSatis"/></td>
+                                    <td><label for="satisfecho" class="form__label">Satisfecho</label></td>
+                                    <td><input type="radio" id="satisfecho" class="form__checks" placeholder=" "/></td>
+                                    
+                                    <td><img src="./images/insatisfecho.svg" alt="imagen para observacion" class="form__iconSatisf"></td>
+                                    <td><label for="insatisfecho" class="form__columSatisfaccion1">Insatisfecho</label></td>
+                                    <td><input type="radio" id="insatisfecho" class="form__checks" placeholder=" "/></td>
+                                </tr>
+                            </table> 
+                        </div>
+                        <div class="buttons">
+                            <input type="submit" class="form__submit" value="Guardar">
+                            <input type="submit" class="form__submit" value="Pendiente">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="operacion__container" id="Eb06"> 
+                <form class="form">
+                    <img src="./images/cerrar.svg" class="form__iconClose" alt="imagen cerrar formulario">
+                    <h2 class="from__title">Formulario de Instalacion/Postventas</h2>
+                    <p class="form__paragraph">Llene con cuidado el formulario<span class="grupos">EB06</span></p>
+                    <span class="form__tit"></span>
+                    <div class="form__client">          
+                        <span class="form__titles"><img src="./images/tipo.svg" alt="imagen para referenciar a tipo de instalacion" class="form__icon">Tipo de orden</span>
+                        <div class="form__tipo">
+                            <label for="instalacion" class="form__labeltipo"><img src="./images/instalacion.svg" alt="imagen para instalacion" class="form__icon"><p class="parrafo">Instalacion</p></label>
+                            <div class="instalacion__tip">
+                                <table>
+                                    <tr>
+                                        <td><label for="upgrade" class="form__labeltip">Upgrade</label></td>
+                                        <td class="tdradio"><input type="radio" id="Upgrade" class="form__radio" placeholder=" "></td>
+                                        <td><label for="inst__new" class="form__labeltip">Instalacion nueva</label></td>
+                                        <td class="tdradio"><input type="radio" id="inst__new" class="form__radio" placeholder=" "/></td>
+                                    </tr>
+                                </table>  
+                            </div>
+                            <label for="postventa" class="form__labeltipo"><img src="./images/postventa.svg" alt="imagen para postventa" class="form__icon"><p class="parrafo">Postventa</p></label>
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr >
+                                                <td><label for="garantia__inst" class="form__labeltip1">Garantia de instalacion</label></td>
+                                                <td class="tdradio"><input type="radio" id="garantia__inst" class="form__radio1" placeholder=" "/></td>
+                                            </tr>
+                                        </table>  
+                                    </div>
+            
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr>
+                                                <td><label for="garantia__mant" class="form__labeltip1">Garantia de mantenimiento</label></td>
+                                                <td class="tdradio"><input type="radio" id="garantia__mant" class="form__radio2" placeholder=" "/></td>
+                                            </tr>
+                                        </table>  
+                                    </div>
+            
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr>
+                                                <td><label for="mantenimiento" class="form__labeltip1">Mantenimiento</label></td>
+                                                <td class="tdradio"><input type="radio" id="mantenimiento" class="form__radio3" placeholder=" "/></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+            
+                        <span class="form__tipp"></span>  
+                        </div>
+                     
+            
+                        <span class="form__titles"> <img src="./images/client.svg" alt="imagen para referenciar a datos para el cliente" class="form__icon">Datos de la orden</span>
+                        <div class="form__datorden">
+                            <label for="proyect" class="form__labeldat">OT:</label>
+                            <input type="text" id="proyect" class="form__proyect" placeholder=" ">
+                            <label for="crm" class="form__labeldat">CRM:</label>
+                            <input type="text" id="crm" class="form__proyect" placeholder=" ">
+                            <label for="name" class="form__labeldat">Nombre de cliente:</label>
+                            <input type="text" id="name" class="form__proyect" placeholder=" ">
+                        </div>
+                        <div class="form__datorden">
+                            <label for="cluster" class="form__labeldat">Cluster:</label>
+                            <input type="text" id="cluster" class="form__proyect" placeholder=" ">
+                            <label for="coordenada" class="form__labeldat">Coordenadas:</label>
+                            <input type="text" id="coordenada" class="form__proyect" placeholder=" ">
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"><img src="./images/marca.svg" alt="imagen para referenciar marca" class="form__icon">Marca</span>   
+                        <div class="form__marca">
+                            <div class="form__option">
+                                <img src="./images/huawei.svg" alt="imagen de huawei" class="form__icon">
+                                <label for="huawei" class="form__labelm">Huawei </label>
+                                <input type="radio" id="huawei" class="form__radiom" placeholder=" ">
+                            </div>
+                            <div class="form__option">
+                                <img src="./images/zte.svg" alt="imagen de ZTE" class="form__icon">
+                                <label for="zte" class="form__labelm"></label>
+                                <input type="radio" id="zte" class="form__radiom" placeholder=" ">
+                            </div>
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"> <img src="./images/plan.svg" alt="imagen para referenciar a tipo de instalacion" class="form__icon">Plan</span>
+                        <div class="form__plan">
+                            <label for="1plan" class="form__labelp">1 Play</label>
+                            <input type="radio" id="1plan" class="form__radiop" placeholder=" ">
+                            <label for="2plan" class="form__labelp">2 Play</label>
+                            <input type="radio" id="2plan" class="form__radiop" placeholder=" ">
+                            <label for="3plan" class="form__labelp">3 Play</label>
+                            <input type="radio" id="3plan" class="form__radiop" placeholder=" ">
+                        </div>
+                        <span class="form__tipp"></span>
+                        <span class="form__titles"> <img src="./images/cable.svg" alt="imagen para referenciar cable" class="form__icon">Cable</span>
+                        <div class="form__cable">
+                            <label for="50mts" class="form__labelc">50 metros</label>
+                            <input type="radio" id="50mts" class="form__radioc" placeholder=" ">
+                            <label for="80mts" class="form__labelc">80 metros</label>
+                            <input type="radio" id="80mts" class="form__radioc" placeholder=" ">
+                            <label for="100mts" class="form__labelc">100 metros</label>
+                            <input type="radio" id="100mts" class="form__radioc" placeholder=" ">
+                        </div>
+                        <div class="form__materiales">
+                            <span class="form__oks"><img src="./images/materiales.svg" alt="imagen para referenciar materiales" class="form__icon">Materiales</span>
+                            <input type="checkbox" id="ok" class="form__check" placeholder=" ">
+                            <label for="ok" class="form__labelmm">OK</label>
+                        </div>
+                        <span class="form__tipp"></span>
+                        
+                        <span class="form__titles"><img src="./images/equipos.svg" alt="imagen para equipos" class="form__icon">Equipos de instalacion</span>
+                        <div class="form__equipos">
+                            <label for="nontel" class="form__labele1"><img src="./images/nontele.svg" alt="imagen para sin telefono" class="form__iconEq">Sin telefono</label>
+                            <input type="checkbox" id="nontel" class="form__check" placeholder=" ">
+                            <div class="form__datoseries">
+                                <label for="telefono" class="form__labele1"><img src="./images/telefono.svg" alt="imagen para referenciar a telefono" class="form__iconTel">Serie de telefono:</label>
+                                <input type="text" id="telefono" class="form__series" placeholder=" ">
+                                <label for="onth" class="form__labele1">Serie ONT Huawei:</label>
+                                <input type="text" id="onth" class="form__series" placeholder=" ">
+                                <label for="ontz" class="form__labele1">Serie ONT ZTE:</label>
+                                <input type="text" id="ontz" class="form__series" placeholder=" ">
+                                <span class="form__line"></span>
+                            </div>
+                            <span class="form__titles"><img src="./images/iptvott.svg" alt="imagen para referenciar a iptv o ott" class="form__icon">Tipo</span>
+                            <div class="form__tip">
+                                <label for="OTT" class="form__labelt">OTT</label>
+                                <input type="radio" id="OTT" class="form__radiot" placeholder=" ">
+                                <label for="IPTV" class="form__labelt">IPTV</label>
+                                <input type="radio" id="IPTV" class="form__radiot" placeholder=" ">
+                            </div>
+                            <div class="form__datoseries">
+                                <label for="deco1" class="form__label2">Decodificador 1:</label>
+                                <input type="text" id="deco1" class="form__series" placeholder=" ">
+                                <label for="deco2" class="form__label2">Decodificador 2:</label>
+                                <input type="text" id="deco2" class="form__series" placeholder=" ">
+                                <label for="deco3" class="form__label2">Decodificador 3:</label>
+                                <input type="text" id="deco3" class="form__series" placeholder=" ">
+                            </div>
+            
+                            <div class="form__materialesIP">
+                                <span class="form__oks1"><img src="./images/materiales.svg" alt="imagen para referenciar materiales" class="form__icon">Materiales de IPTV</span>
+                                <input type="checkbox" id="ok" class="form__check1" placeholder=" ">
+                                <label for="ok" class="form__label">OK</label>
+                            </div>
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"> <img src="./images/extras.svg" alt="imagen para extras" class="form__icon">Materiales extras/postventa</span>
+                        <div class="form__matextra">
+                            <table class="form__datoextra">
+                                <tr>
+                                    <td><label for="conector" class="form__labeld">Conecotr SC/APC</label></td>
+                                    <td><input type="checkbox" id="conector" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="patchcord" class="form__labeld">Patchcord SC/APC</label></td>
+                                    <td><input type="checkbox" id="patchcord" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="roseta" class="form__labeld">ATB Roseta optica</label></td>
+                                    <td><input type="checkbox" id="roseta" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="precinto" class="form__labeld">Precinto rojo</label></td>
+                                    <td><input type="checkbox" id="precinto" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="50mts" class="form__labeld">Cable de 50mts</label></td>
+                                    <td><input type="checkbox" id="50mts" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="80mts" class="form__labeld">Cable de 80mts</label></td>
+                                    <td><input type="checkbox" id="80mts" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="100mts" class="form__labeld">Cable de 100mts</label></td>
+                                    <td><input type="checkbox" id="100mts" class="form__checkd" placeholder=" "></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="control" class="form__labeld">Control IPTV</label></td>
+                                    <td><input type="checkbox" id="control" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="conect" class="form__labeld">Conector RJ45</label></td>
+                                    <td><input type="checkbox" id="conect" class="form__checkd" placeholder=" "></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="form__tipp"></span>
+                        <div class="form__observaciones">
+                            <label for="observacion" class="form__label"><img src="./images/observacion.svg" alt="imagen para observacion" class="form__icon">Observaciones:</label>
+                            <textarea id="observacion" class="form__txtObservaciones" placeholder=" "></textarea>
+                            <span class="form__line"></span>
+                        </div>
+            
+                        <span class="form__titles">Cliente:</span>
+                        <div class="form__satisfaccion">
+                            <table>
+                                <tr>
+                                    <td><img src="./images/satisfecho.svg" alt="imagen para observacion" class="form__iconSatis"/></td>
+                                    <td><label for="satisfecho" class="form__label">Satisfecho</label></td>
+                                    <td><input type="radio" id="satisfecho" class="form__checks" placeholder=" "/></td>
+                                    
+                                    <td><img src="./images/insatisfecho.svg" alt="imagen para observacion" class="form__iconSatisf"></td>
+                                    <td><label for="insatisfecho" class="form__columSatisfaccion1">Insatisfecho</label></td>
+                                    <td><input type="radio" id="insatisfecho" class="form__checks" placeholder=" "/></td>
+                                </tr>
+                            </table> 
+                        </div>
+                        <div class="buttons">
+                            <input type="submit" class="form__submit" value="Guardar">
+                            <input type="submit" class="form__submit" value="Pendiente">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="forms__rows" id="formsGrupos2">
+
+            <div class="operacion__container"> 
+                <form class="form">
+                    <img src="./images/cerrar.svg" class="form__iconClose" alt="imagen cerrar formulario">
+                    <h2 class="from__title">Formulario de Instalacion/Postventas</h2>
+                    <p class="form__paragraph">Llene con cuidado el formulario<span class="grupos">EB07</span></p>
+                    <span class="form__tit"></span>
+                    <div class="form__client">          
+                        <span class="form__titles"><img src="./images/tipo.svg" alt="imagen para referenciar a tipo de instalacion" class="form__icon">Tipo de orden</span>
+                        <div class="form__tipo">
+                            <label for="instalacion" class="form__labeltipo"><img src="./images/instalacion.svg" alt="imagen para instalacion" class="form__icon"><p class="parrafo">Instalacion</p></label>
+                            <div class="instalacion__tip">
+                                <table>
+                                    <tr>
+                                        <td><label for="upgrade" class="form__labeltip">Upgrade</label></td>
+                                        <td class="tdradio"><input type="radio" id="Upgrade" class="form__radio" placeholder=" "></td>
+                                        <td><label for="inst__new" class="form__labeltip">Instalacion nueva</label></td>
+                                        <td class="tdradio"><input type="radio" id="inst__new" class="form__radio" placeholder=" "/></td>
+                                    </tr>
+                                </table>  
+                            </div>
+                            <label for="postventa" class="form__labeltipo"><img src="./images/postventa.svg" alt="imagen para postventa" class="form__icon"><p class="parrafo">Postventa</p></label>
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr >
+                                                <td><label for="garantia__inst" class="form__labeltip1">Garantia de instalacion</label></td>
+                                                <td class="tdradio"><input type="radio" id="garantia__inst" class="form__radio1" placeholder=" "/></td>
+                                            </tr>
+                                        </table>  
+                                    </div>
+            
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr>
+                                                <td><label for="garantia__mant" class="form__labeltip1">Garantia de mantenimiento</label></td>
+                                                <td class="tdradio"><input type="radio" id="garantia__mant" class="form__radio2" placeholder=" "/></td>
+                                            </tr>
+                                        </table>  
+                                    </div>
+            
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr>
+                                                <td><label for="mantenimiento" class="form__labeltip1">Mantenimiento</label></td>
+                                                <td class="tdradio"><input type="radio" id="mantenimiento" class="form__radio3" placeholder=" "/></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+            
+                        <span class="form__tipp"></span>  
+                        </div>
+                     
+            
+                        <span class="form__titles"> <img src="./images/client.svg" alt="imagen para referenciar a datos para el cliente" class="form__icon">Datos de la orden</span>
+                        <div class="form__datorden">
+                            <label for="proyect" class="form__labeldat">OT:</label>
+                            <input type="text" id="proyect" class="form__proyect" placeholder=" ">
+                            <label for="crm" class="form__labeldat">CRM:</label>
+                            <input type="text" id="crm" class="form__proyect" placeholder=" ">
+                            <label for="name" class="form__labeldat">Nombre de cliente:</label>
+                            <input type="text" id="name" class="form__proyect" placeholder=" ">
+                        </div>
+                        <div class="form__datorden">
+                            <label for="cluster" class="form__labeldat">Cluster:</label>
+                            <input type="text" id="cluster" class="form__proyect" placeholder=" ">
+                            <label for="coordenada" class="form__labeldat">Coordenadas:</label>
+                            <input type="text" id="coordenada" class="form__proyect" placeholder=" ">
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"><img src="./images/marca.svg" alt="imagen para referenciar marca" class="form__icon">Marca</span>   
+                        <div class="form__marca">
+                            <div class="form__option">
+                                <img src="./images/huawei.svg" alt="imagen de huawei" class="form__icon">
+                                <label for="huawei" class="form__labelm">Huawei </label>
+                                <input type="radio" id="huawei" class="form__radiom" placeholder=" ">
+                            </div>
+                            <div class="form__option">
+                                <img src="./images/zte.svg" alt="imagen de ZTE" class="form__icon">
+                                <label for="zte" class="form__labelm"></label>
+                                <input type="radio" id="zte" class="form__radiom" placeholder=" ">
+                            </div>
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"> <img src="./images/plan.svg" alt="imagen para referenciar a tipo de instalacion" class="form__icon">Plan</span>
+                        <div class="form__plan">
+                            <label for="1plan" class="form__labelp">1 Play</label>
+                            <input type="radio" id="1plan" class="form__radiop" placeholder=" ">
+                            <label for="2plan" class="form__labelp">2 Play</label>
+                            <input type="radio" id="2plan" class="form__radiop" placeholder=" ">
+                            <label for="3plan" class="form__labelp">3 Play</label>
+                            <input type="radio" id="3plan" class="form__radiop" placeholder=" ">
+                        </div>
+                        <span class="form__tipp"></span>
+                        <span class="form__titles"> <img src="./images/cable.svg" alt="imagen para referenciar cable" class="form__icon">Cable</span>
+                        <div class="form__cable">
+                            <label for="50mts" class="form__labelc">50 metros</label>
+                            <input type="radio" id="50mts" class="form__radioc" placeholder=" ">
+                            <label for="80mts" class="form__labelc">80 metros</label>
+                            <input type="radio" id="80mts" class="form__radioc" placeholder=" ">
+                            <label for="100mts" class="form__labelc">100 metros</label>
+                            <input type="radio" id="100mts" class="form__radioc" placeholder=" ">
+                        </div>
+                        <div class="form__materiales">
+                            <span class="form__oks"><img src="./images/materiales.svg" alt="imagen para referenciar materiales" class="form__icon">Materiales</span>
+                            <input type="checkbox" id="ok" class="form__check" placeholder=" ">
+                            <label for="ok" class="form__labelmm">OK</label>
+                        </div>
+                        <span class="form__tipp"></span>
+                        
+                        <span class="form__titles"><img src="./images/equipos.svg" alt="imagen para equipos" class="form__icon">Equipos de instalacion</span>
+                        <div class="form__equipos">
+                            <label for="nontel" class="form__labele1"><img src="./images/nontele.svg" alt="imagen para sin telefono" class="form__iconEq">Sin telefono</label>
+                            <input type="checkbox" id="nontel" class="form__check" placeholder=" ">
+                            <div class="form__datoseries">
+                                <label for="telefono" class="form__labele1"><img src="./images/telefono.svg" alt="imagen para referenciar a telefono" class="form__iconTel">Serie de telefono:</label>
+                                <input type="text" id="telefono" class="form__series" placeholder=" ">
+                                <label for="onth" class="form__labele1">Serie ONT Huawei:</label>
+                                <input type="text" id="onth" class="form__series" placeholder=" ">
+                                <label for="ontz" class="form__labele1">Serie ONT ZTE:</label>
+                                <input type="text" id="ontz" class="form__series" placeholder=" ">
+                                <span class="form__line"></span>
+                            </div>
+                            <span class="form__titles"><img src="./images/iptvott.svg" alt="imagen para referenciar a iptv o ott" class="form__icon">Tipo</span>
+                            <div class="form__tip">
+                                <label for="OTT" class="form__labelt">OTT</label>
+                                <input type="radio" id="OTT" class="form__radiot" placeholder=" ">
+                                <label for="IPTV" class="form__labelt">IPTV</label>
+                                <input type="radio" id="IPTV" class="form__radiot" placeholder=" ">
+                            </div>
+                            <div class="form__datoseries">
+                                <label for="deco1" class="form__label2">Decodificador 1:</label>
+                                <input type="text" id="deco1" class="form__series" placeholder=" ">
+                                <label for="deco2" class="form__label2">Decodificador 2:</label>
+                                <input type="text" id="deco2" class="form__series" placeholder=" ">
+                                <label for="deco3" class="form__label2">Decodificador 3:</label>
+                                <input type="text" id="deco3" class="form__series" placeholder=" ">
+                            </div>
+            
+                            <div class="form__materialesIP">
+                                <span class="form__oks1"><img src="./images/materiales.svg" alt="imagen para referenciar materiales" class="form__icon">Materiales de IPTV</span>
+                                <input type="checkbox" id="ok" class="form__check1" placeholder=" ">
+                                <label for="ok" class="form__label">OK</label>
+                            </div>
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"> <img src="./images/extras.svg" alt="imagen para extras" class="form__icon">Materiales extras/postventa</span>
+                        <div class="form__matextra">
+                            <table class="form__datoextra">
+                                <tr>
+                                    <td><label for="conector" class="form__labeld">Conecotr SC/APC</label></td>
+                                    <td><input type="checkbox" id="conector" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="patchcord" class="form__labeld">Patchcord SC/APC</label></td>
+                                    <td><input type="checkbox" id="patchcord" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="roseta" class="form__labeld">ATB Roseta optica</label></td>
+                                    <td><input type="checkbox" id="roseta" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="precinto" class="form__labeld">Precinto rojo</label></td>
+                                    <td><input type="checkbox" id="precinto" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="50mts" class="form__labeld">Cable de 50mts</label></td>
+                                    <td><input type="checkbox" id="50mts" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="80mts" class="form__labeld">Cable de 80mts</label></td>
+                                    <td><input type="checkbox" id="80mts" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="100mts" class="form__labeld">Cable de 100mts</label></td>
+                                    <td><input type="checkbox" id="100mts" class="form__checkd" placeholder=" "></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="control" class="form__labeld">Control IPTV</label></td>
+                                    <td><input type="checkbox" id="control" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="conect" class="form__labeld">Conector RJ45</label></td>
+                                    <td><input type="checkbox" id="conect" class="form__checkd" placeholder=" "></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="form__tipp"></span>
+                        <div class="form__observaciones">
+                            <label for="observacion" class="form__label"><img src="./images/observacion.svg" alt="imagen para observacion" class="form__icon">Observaciones:</label>
+                            <textarea id="observacion" class="form__txtObservaciones" placeholder=" "></textarea>
+                            <span class="form__line"></span>
+                        </div>
+            
+                        <span class="form__titles">Cliente:</span>
+                        <div class="form__satisfaccion">
+                            <table>
+                                <tr>
+                                    <td><img src="./images/satisfecho.svg" alt="imagen para observacion" class="form__iconSatis"/></td>
+                                    <td><label for="satisfecho" class="form__label">Satisfecho</label></td>
+                                    <td><input type="radio" id="satisfecho" class="form__checks" placeholder=" "/></td>
+                                    
+                                    <td><img src="./images/insatisfecho.svg" alt="imagen para observacion" class="form__iconSatisf"></td>
+                                    <td><label for="insatisfecho" class="form__columSatisfaccion1">Insatisfecho</label></td>
+                                    <td><input type="radio" id="insatisfecho" class="form__checks" placeholder=" "/></td>
+                                </tr>
+                            </table> 
+                        </div>
+                        <div class="buttons">
+                            <input type="submit" class="form__submit" value="Guardar">
+                            <input type="submit" class="form__submit" value="Pendiente">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="operacion__container"> 
+                <form class="form">
+                    <img src="./images/cerrar.svg" class="form__iconClose" alt="imagen cerrar formulario">
+                    <h2 class="from__title">Formulario de Instalacion/Postventas</h2>
+                    <p class="form__paragraph">Llene con cuidado el formulario<span class="grupos">EB10</span></p>
+                    <span class="form__tit"></span>
+                    <div class="form__client">          
+                        <span class="form__titles"><img src="./images/tipo.svg" alt="imagen para referenciar a tipo de instalacion" class="form__icon">Tipo de orden</span>
+                        <div class="form__tipo">
+                            <label for="instalacion" class="form__labeltipo"><img src="./images/instalacion.svg" alt="imagen para instalacion" class="form__icon"><p class="parrafo">Instalacion</p></label>
+                            <div class="instalacion__tip">
+                                <table>
+                                    <tr>
+                                        <td><label for="upgrade" class="form__labeltip">Upgrade</label></td>
+                                        <td class="tdradio"><input type="radio" id="Upgrade" class="form__radio" placeholder=" "></td>
+                                        <td><label for="inst__new" class="form__labeltip">Instalacion nueva</label></td>
+                                        <td class="tdradio"><input type="radio" id="inst__new" class="form__radio" placeholder=" "/></td>
+                                    </tr>
+                                </table>  
+                            </div>
+                            <label for="postventa" class="form__labeltipo"><img src="./images/postventa.svg" alt="imagen para postventa" class="form__icon"><p class="parrafo">Postventa</p></label>
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr >
+                                                <td><label for="garantia__inst" class="form__labeltip1">Garantia de instalacion</label></td>
+                                                <td class="tdradio"><input type="radio" id="garantia__inst" class="form__radio1" placeholder=" "/></td>
+                                            </tr>
+                                        </table>  
+                                    </div>
+            
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr>
+                                                <td><label for="garantia__mant" class="form__labeltip1">Garantia de mantenimiento</label></td>
+                                                <td class="tdradio"><input type="radio" id="garantia__mant" class="form__radio2" placeholder=" "/></td>
+                                            </tr>
+                                        </table>  
+                                    </div>
+            
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr>
+                                                <td><label for="mantenimiento" class="form__labeltip1">Mantenimiento</label></td>
+                                                <td class="tdradio"><input type="radio" id="mantenimiento" class="form__radio3" placeholder=" "/></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+            
+                        <span class="form__tipp"></span>  
+                        </div>
+                     
+            
+                        <span class="form__titles"> <img src="./images/client.svg" alt="imagen para referenciar a datos para el cliente" class="form__icon">Datos de la orden</span>
+                        <div class="form__datorden">
+                            <label for="proyect" class="form__labeldat">OT:</label>
+                            <input type="text" id="proyect" class="form__proyect" placeholder=" ">
+                            <label for="crm" class="form__labeldat">CRM:</label>
+                            <input type="text" id="crm" class="form__proyect" placeholder=" ">
+                            <label for="name" class="form__labeldat">Nombre de cliente:</label>
+                            <input type="text" id="name" class="form__proyect" placeholder=" ">
+                        </div>
+                        <div class="form__datorden">
+                            <label for="cluster" class="form__labeldat">Cluster:</label>
+                            <input type="text" id="cluster" class="form__proyect" placeholder=" ">
+                            <label for="coordenada" class="form__labeldat">Coordenadas:</label>
+                            <input type="text" id="coordenada" class="form__proyect" placeholder=" ">
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"><img src="./images/marca.svg" alt="imagen para referenciar marca" class="form__icon">Marca</span>   
+                        <div class="form__marca">
+                            <div class="form__option">
+                                <img src="./images/huawei.svg" alt="imagen de huawei" class="form__icon">
+                                <label for="huawei" class="form__labelm">Huawei </label>
+                                <input type="radio" id="huawei" class="form__radiom" placeholder=" ">
+                            </div>
+                            <div class="form__option">
+                                <img src="./images/zte.svg" alt="imagen de ZTE" class="form__icon">
+                                <label for="zte" class="form__labelm"></label>
+                                <input type="radio" id="zte" class="form__radiom" placeholder=" ">
+                            </div>
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"> <img src="./images/plan.svg" alt="imagen para referenciar a tipo de instalacion" class="form__icon">Plan</span>
+                        <div class="form__plan">
+                            <label for="1plan" class="form__labelp">1 Play</label>
+                            <input type="radio" id="1plan" class="form__radiop" placeholder=" ">
+                            <label for="2plan" class="form__labelp">2 Play</label>
+                            <input type="radio" id="2plan" class="form__radiop" placeholder=" ">
+                            <label for="3plan" class="form__labelp">3 Play</label>
+                            <input type="radio" id="3plan" class="form__radiop" placeholder=" ">
+                        </div>
+                        <span class="form__tipp"></span>
+                        <span class="form__titles"> <img src="./images/cable.svg" alt="imagen para referenciar cable" class="form__icon">Cable</span>
+                        <div class="form__cable">
+                            <label for="50mts" class="form__labelc">50 metros</label>
+                            <input type="radio" id="50mts" class="form__radioc" placeholder=" ">
+                            <label for="80mts" class="form__labelc">80 metros</label>
+                            <input type="radio" id="80mts" class="form__radioc" placeholder=" ">
+                            <label for="100mts" class="form__labelc">100 metros</label>
+                            <input type="radio" id="100mts" class="form__radioc" placeholder=" ">
+                        </div>
+                        <div class="form__materiales">
+                            <span class="form__oks"><img src="./images/materiales.svg" alt="imagen para referenciar materiales" class="form__icon">Materiales</span>
+                            <input type="checkbox" id="ok" class="form__check" placeholder=" ">
+                            <label for="ok" class="form__labelmm">OK</label>
+                        </div>
+                        <span class="form__tipp"></span>
+                        
+                        <span class="form__titles"><img src="./images/equipos.svg" alt="imagen para equipos" class="form__icon">Equipos de instalacion</span>
+                        <div class="form__equipos">
+                            <label for="nontel" class="form__labele1"><img src="./images/nontele.svg" alt="imagen para sin telefono" class="form__iconEq">Sin telefono</label>
+                            <input type="checkbox" id="nontel" class="form__check" placeholder=" ">
+                            <div class="form__datoseries">
+                                <label for="telefono" class="form__labele1"><img src="./images/telefono.svg" alt="imagen para referenciar a telefono" class="form__iconTel">Serie de telefono:</label>
+                                <input type="text" id="telefono" class="form__series" placeholder=" ">
+                                <label for="onth" class="form__labele1">Serie ONT Huawei:</label>
+                                <input type="text" id="onth" class="form__series" placeholder=" ">
+                                <label for="ontz" class="form__labele1">Serie ONT ZTE:</label>
+                                <input type="text" id="ontz" class="form__series" placeholder=" ">
+                                <span class="form__line"></span>
+                            </div>
+                            <span class="form__titles"><img src="./images/iptvott.svg" alt="imagen para referenciar a iptv o ott" class="form__icon">Tipo</span>
+                            <div class="form__tip">
+                                <label for="OTT" class="form__labelt">OTT</label>
+                                <input type="radio" id="OTT" class="form__radiot" placeholder=" ">
+                                <label for="IPTV" class="form__labelt">IPTV</label>
+                                <input type="radio" id="IPTV" class="form__radiot" placeholder=" ">
+                            </div>
+                            <div class="form__datoseries">
+                                <label for="deco1" class="form__label2">Decodificador 1:</label>
+                                <input type="text" id="deco1" class="form__series" placeholder=" ">
+                                <label for="deco2" class="form__label2">Decodificador 2:</label>
+                                <input type="text" id="deco2" class="form__series" placeholder=" ">
+                                <label for="deco3" class="form__label2">Decodificador 3:</label>
+                                <input type="text" id="deco3" class="form__series" placeholder=" ">
+                            </div>
+            
+                            <div class="form__materialesIP">
+                                <span class="form__oks1"><img src="./images/materiales.svg" alt="imagen para referenciar materiales" class="form__icon">Materiales de IPTV</span>
+                                <input type="checkbox" id="ok" class="form__check1" placeholder=" ">
+                                <label for="ok" class="form__label">OK</label>
+                            </div>
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"> <img src="./images/extras.svg" alt="imagen para extras" class="form__icon">Materiales extras/postventa</span>
+                        <div class="form__matextra">
+                            <table class="form__datoextra">
+                                <tr>
+                                    <td><label for="conector" class="form__labeld">Conecotr SC/APC</label></td>
+                                    <td><input type="checkbox" id="conector" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="patchcord" class="form__labeld">Patchcord SC/APC</label></td>
+                                    <td><input type="checkbox" id="patchcord" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="roseta" class="form__labeld">ATB Roseta optica</label></td>
+                                    <td><input type="checkbox" id="roseta" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="precinto" class="form__labeld">Precinto rojo</label></td>
+                                    <td><input type="checkbox" id="precinto" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="50mts" class="form__labeld">Cable de 50mts</label></td>
+                                    <td><input type="checkbox" id="50mts" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="80mts" class="form__labeld">Cable de 80mts</label></td>
+                                    <td><input type="checkbox" id="80mts" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="100mts" class="form__labeld">Cable de 100mts</label></td>
+                                    <td><input type="checkbox" id="100mts" class="form__checkd" placeholder=" "></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="control" class="form__labeld">Control IPTV</label></td>
+                                    <td><input type="checkbox" id="control" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="conect" class="form__labeld">Conector RJ45</label></td>
+                                    <td><input type="checkbox" id="conect" class="form__checkd" placeholder=" "></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="form__tipp"></span>
+                        <div class="form__observaciones">
+                            <label for="observacion" class="form__label"><img src="./images/observacion.svg" alt="imagen para observacion" class="form__icon">Observaciones:</label>
+                            <textarea id="observacion" class="form__txtObservaciones" placeholder=" "></textarea>
+                            <span class="form__line"></span>
+                        </div>
+            
+                        <span class="form__titles">Cliente:</span>
+                        <div class="form__satisfaccion">
+                            <table>
+                                <tr>
+                                    <td><img src="./images/satisfecho.svg" alt="imagen para observacion" class="form__iconSatis"/></td>
+                                    <td><label for="satisfecho" class="form__label">Satisfecho</label></td>
+                                    <td><input type="radio" id="satisfecho" class="form__checks" placeholder=" "/></td>
+                                    
+                                    <td><img src="./images/insatisfecho.svg" alt="imagen para observacion" class="form__iconSatisf"></td>
+                                    <td><label for="insatisfecho" class="form__columSatisfaccion1">Insatisfecho</label></td>
+                                    <td><input type="radio" id="insatisfecho" class="form__checks" placeholder=" "/></td>
+                                </tr>
+                            </table> 
+                        </div>
+                        <div class="buttons">
+                            <input type="submit" class="form__submit" value="Guardar">
+                            <input type="submit" class="form__submit" value="Pendiente">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="operacion__container"> 
+                <form class="form">
+                    <img src="./images/cerrar.svg" class="form__iconClose" alt="imagen cerrar formulario">
+                    <h2 class="from__title">Formulario de Instalacion/Postventas</h2>
+                    <p class="form__paragraph">Llene con cuidado el formulario<span class="grupos">EB011</span></p>
+                    <span class="form__tit"></span>
+                    <div class="form__client">          
+                        <span class="form__titles"><img src="./images/tipo.svg" alt="imagen para referenciar a tipo de instalacion" class="form__icon">Tipo de orden</span>
+                        <div class="form__tipo">
+                            <label for="instalacion" class="form__labeltipo"><img src="./images/instalacion.svg" alt="imagen para instalacion" class="form__icon"><p class="parrafo">Instalacion</p></label>
+                            <div class="instalacion__tip">
+                                <table>
+                                    <tr>
+                                        <td><label for="upgrade" class="form__labeltip">Upgrade</label></td>
+                                        <td class="tdradio"><input type="radio" id="Upgrade" class="form__radio" placeholder=" "></td>
+                                        <td><label for="inst__new" class="form__labeltip">Instalacion nueva</label></td>
+                                        <td class="tdradio"><input type="radio" id="inst__new" class="form__radio" placeholder=" "/></td>
+                                    </tr>
+                                </table>  
+                            </div>
+                            <label for="postventa" class="form__labeltipo"><img src="./images/postventa.svg" alt="imagen para postventa" class="form__icon"><p class="parrafo">Postventa</p></label>
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr >
+                                                <td><label for="garantia__inst" class="form__labeltip1">Garantia de instalacion</label></td>
+                                                <td class="tdradio"><input type="radio" id="garantia__inst" class="form__radio1" placeholder=" "/></td>
+                                            </tr>
+                                        </table>  
+                                    </div>
+            
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr>
+                                                <td><label for="garantia__mant" class="form__labeltip1">Garantia de mantenimiento</label></td>
+                                                <td class="tdradio"><input type="radio" id="garantia__mant" class="form__radio2" placeholder=" "/></td>
+                                            </tr>
+                                        </table>  
+                                    </div>
+            
+                                    <div class="postventa__tip">
+                                        <table>
+                                            <tr>
+                                                <td><label for="mantenimiento" class="form__labeltip1">Mantenimiento</label></td>
+                                                <td class="tdradio"><input type="radio" id="mantenimiento" class="form__radio3" placeholder=" "/></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+            
+                        <span class="form__tipp"></span>  
+                        </div>
+                     
+            
+                        <span class="form__titles"> <img src="./images/client.svg" alt="imagen para referenciar a datos para el cliente" class="form__icon">Datos de la orden</span>
+                        <div class="form__datorden">
+                            <label for="proyect" class="form__labeldat">OT:</label>
+                            <input type="text" id="proyect" class="form__proyect" placeholder=" ">
+                            <label for="crm" class="form__labeldat">CRM:</label>
+                            <input type="text" id="crm" class="form__proyect" placeholder=" ">
+                            <label for="name" class="form__labeldat">Nombre de cliente:</label>
+                            <input type="text" id="name" class="form__proyect" placeholder=" ">
+                        </div>
+                        <div class="form__datorden">
+                            <label for="cluster" class="form__labeldat">Cluster:</label>
+                            <input type="text" id="cluster" class="form__proyect" placeholder=" ">
+                            <label for="coordenada" class="form__labeldat">Coordenadas:</label>
+                            <input type="text" id="coordenada" class="form__proyect" placeholder=" ">
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"><img src="./images/marca.svg" alt="imagen para referenciar marca" class="form__icon">Marca</span>   
+                        <div class="form__marca">
+                            <div class="form__option">
+                                <img src="./images/huawei.svg" alt="imagen de huawei" class="form__icon">
+                                <label for="huawei" class="form__labelm">Huawei </label>
+                                <input type="radio" id="huawei" class="form__radiom" placeholder=" ">
+                            </div>
+                            <div class="form__option">
+                                <img src="./images/zte.svg" alt="imagen de ZTE" class="form__icon">
+                                <label for="zte" class="form__labelm"></label>
+                                <input type="radio" id="zte" class="form__radiom" placeholder=" ">
+                            </div>
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"> <img src="./images/plan.svg" alt="imagen para referenciar a tipo de instalacion" class="form__icon">Plan</span>
+                        <div class="form__plan">
+                            <label for="1plan" class="form__labelp">1 Play</label>
+                            <input type="radio" id="1plan" class="form__radiop" placeholder=" ">
+                            <label for="2plan" class="form__labelp">2 Play</label>
+                            <input type="radio" id="2plan" class="form__radiop" placeholder=" ">
+                            <label for="3plan" class="form__labelp">3 Play</label>
+                            <input type="radio" id="3plan" class="form__radiop" placeholder=" ">
+                        </div>
+                        <span class="form__tipp"></span>
+                        <span class="form__titles"> <img src="./images/cable.svg" alt="imagen para referenciar cable" class="form__icon">Cable</span>
+                        <div class="form__cable">
+                            <label for="50mts" class="form__labelc">50 metros</label>
+                            <input type="radio" id="50mts" class="form__radioc" placeholder=" ">
+                            <label for="80mts" class="form__labelc">80 metros</label>
+                            <input type="radio" id="80mts" class="form__radioc" placeholder=" ">
+                            <label for="100mts" class="form__labelc">100 metros</label>
+                            <input type="radio" id="100mts" class="form__radioc" placeholder=" ">
+                        </div>
+                        <div class="form__materiales">
+                            <span class="form__oks"><img src="./images/materiales.svg" alt="imagen para referenciar materiales" class="form__icon">Materiales</span>
+                            <input type="checkbox" id="ok" class="form__check" placeholder=" ">
+                            <label for="ok" class="form__labelmm">OK</label>
+                        </div>
+                        <span class="form__tipp"></span>
+                        
+                        <span class="form__titles"><img src="./images/equipos.svg" alt="imagen para equipos" class="form__icon">Equipos de instalacion</span>
+                        <div class="form__equipos">
+                            <label for="nontel" class="form__labele1"><img src="./images/nontele.svg" alt="imagen para sin telefono" class="form__iconEq">Sin telefono</label>
+                            <input type="checkbox" id="nontel" class="form__check" placeholder=" ">
+                            <div class="form__datoseries">
+                                <label for="telefono" class="form__labele1"><img src="./images/telefono.svg" alt="imagen para referenciar a telefono" class="form__iconTel">Serie de telefono:</label>
+                                <input type="text" id="telefono" class="form__series" placeholder=" ">
+                                <label for="onth" class="form__labele1">Serie ONT Huawei:</label>
+                                <input type="text" id="onth" class="form__series" placeholder=" ">
+                                <label for="ontz" class="form__labele1">Serie ONT ZTE:</label>
+                                <input type="text" id="ontz" class="form__series" placeholder=" ">
+                                <span class="form__line"></span>
+                            </div>
+                            <span class="form__titles"><img src="./images/iptvott.svg" alt="imagen para referenciar a iptv o ott" class="form__icon">Tipo</span>
+                            <div class="form__tip">
+                                <label for="OTT" class="form__labelt">OTT</label>
+                                <input type="radio" id="OTT" class="form__radiot" placeholder=" ">
+                                <label for="IPTV" class="form__labelt">IPTV</label>
+                                <input type="radio" id="IPTV" class="form__radiot" placeholder=" ">
+                            </div>
+                            <div class="form__datoseries">
+                                <label for="deco1" class="form__label2">Decodificador 1:</label>
+                                <input type="text" id="deco1" class="form__series" placeholder=" ">
+                                <label for="deco2" class="form__label2">Decodificador 2:</label>
+                                <input type="text" id="deco2" class="form__series" placeholder=" ">
+                                <label for="deco3" class="form__label2">Decodificador 3:</label>
+                                <input type="text" id="deco3" class="form__series" placeholder=" ">
+                            </div>
+            
+                            <div class="form__materialesIP">
+                                <span class="form__oks1"><img src="./images/materiales.svg" alt="imagen para referenciar materiales" class="form__icon">Materiales de IPTV</span>
+                                <input type="checkbox" id="ok" class="form__check1" placeholder=" ">
+                                <label for="ok" class="form__label">OK</label>
+                            </div>
+                        </div>
+                        <span class="form__tipp"></span>
+            
+                        <span class="form__titles"> <img src="./images/extras.svg" alt="imagen para extras" class="form__icon">Materiales extras/postventa</span>
+                        <div class="form__matextra">
+                            <table class="form__datoextra">
+                                <tr>
+                                    <td><label for="conector" class="form__labeld">Conecotr SC/APC</label></td>
+                                    <td><input type="checkbox" id="conector" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="patchcord" class="form__labeld">Patchcord SC/APC</label></td>
+                                    <td><input type="checkbox" id="patchcord" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="roseta" class="form__labeld">ATB Roseta optica</label></td>
+                                    <td><input type="checkbox" id="roseta" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="precinto" class="form__labeld">Precinto rojo</label></td>
+                                    <td><input type="checkbox" id="precinto" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="50mts" class="form__labeld">Cable de 50mts</label></td>
+                                    <td><input type="checkbox" id="50mts" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="80mts" class="form__labeld">Cable de 80mts</label></td>
+                                    <td><input type="checkbox" id="80mts" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="100mts" class="form__labeld">Cable de 100mts</label></td>
+                                    <td><input type="checkbox" id="100mts" class="form__checkd" placeholder=" "></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="control" class="form__labeld">Control IPTV</label></td>
+                                    <td><input type="checkbox" id="control" class="form__checkd" placeholder=" "/></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="conect" class="form__labeld">Conector RJ45</label></td>
+                                    <td><input type="checkbox" id="conect" class="form__checkd" placeholder=" "></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="form__tipp"></span>
+                        <div class="form__observaciones">
+                            <label for="observacion" class="form__label"><img src="./images/observacion.svg" alt="imagen para observacion" class="form__icon">Observaciones:</label>
+                            <textarea id="observacion" class="form__txtObservaciones" placeholder=" "></textarea>
+                            <span class="form__line"></span>
+                        </div>
+            
+                        <span class="form__titles">Cliente:</span>
+                        <div class="form__satisfaccion">
+                            <table>
+                                <tr>
+                                    <td><img src="./images/satisfecho.svg" alt="imagen para observacion" class="form__iconSatis"/></td>
+                                    <td><label for="satisfecho" class="form__label">Satisfecho</label></td>
+                                    <td><input type="radio" id="satisfecho" class="form__checks" placeholder=" "/></td>
+                                    
+                                    <td><img src="./images/insatisfecho.svg" alt="imagen para observacion" class="form__iconSatisf"></td>
+                                    <td><label for="insatisfecho" class="form__columSatisfaccion1">Insatisfecho</label></td>
+                                    <td><input type="radio" id="insatisfecho" class="form__checks" placeholder=" "/></td>
+                                </tr>
+                            </table> 
+                        </div>
+                        <div class="buttons">
+                            <input type="submit" class="form__submit" value="Guardar">
+                            <input type="submit" class="form__submit" value="Pendiente">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+       
+</div>       
+ <script src="./js/main.js"></script>
+ <script src="./js/operaciones.js"></script>
+ <script src="./js/utilitarios.js"></script>
+</body>
+</html>

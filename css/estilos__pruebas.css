@@ -1,0 +1,517 @@
+.operaciones__container
+{
+  display: flex;
+  flex-direction: row;
+}
+
+.forms__rows
+{
+  display: flex;
+  flex-direction: row;  
+}
+
+.forms__columnas
+{
+  display: flex;
+  flex-direction: column;  
+}
+
+.operacion__container 
+{
+    width: 340px;
+    height: 400px;
+    overflow: hidden; /* Ocultar el desplazamiento por defecto */
+    position: relative; /* Permitir que el contenido desborde y se posicione correctamente */
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+  
+  /* Estilos para el contenido del formulario */
+.form 
+{
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+    height: 100%; /* Ocupar todo el alto del contenedor */
+    overflow-y: auto; /* Habilitar el desplazamiento vertical cuando el contenido exceda el contenedor */
+    padding-right: 20px; /* Agregar un pequeño espacio para el ancho del scrollbar */
+    box-sizing: border-box;
+    margin-top: -15px;
+}
+  
+  /* Estilos para los títulos, párrafos y demás elementos del formulario (añadir estilos según tus necesidades) */
+.from__title 
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007BFF; /* Un color azul agradable para el título */
+    text-align: center; /* Centrar el título horizontalmente */
+    margin-top: 20px; /* Espacio superior para separar del borde superior del contenedor */
+    margin-bottom: 10px; /* Espacio inferior para separar del párrafo */
+}
+  /* Estilos para los párrafos dentro del formulario */
+.form__paragraph 
+{
+    font-size: 0.9rem;
+    color: #4CAF50; /* Un color verde que combine con el color del título */
+    text-align: right; /* Centrar el párrafo al lado derecho */
+    margin: 0; /* Eliminar el margen predeterminado para evitar espacios innecesarios */
+    margin-bottom: 20px; /* Espacio inferior para separar del título */
+    text-align: center;
+}
+
+.grupos
+{
+  color: red;
+  font-size: 0.9rem;
+  text-align: right;
+  margin-left: 5px;
+  font-style: italic;
+}
+
+/* Estilos para las líneas divisorias */
+.form__tit
+{
+    display: block;
+    height: 2px; /* Ajustar el grosor de la línea */
+    background-color: #2091f9; /* Un color gris claro que complementa el diseño */
+    margin: 15px 0;
+}
+
+/* Estilos para los títulos de sección */
+.form__titles 
+{
+    display: flex; /* Aplicar un diseño flexible */
+    align-items: center; /* Centrar verticalmente el contenido */
+    justify-content: flex-end; /* Alinear el contenido a la derecha */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.parrafo
+{
+  font-style: italic;
+}
+
+  /* Estilos para el contenedor de las opciones de instalación */
+.instalacion__tip 
+{
+    display: flex; /* Aplicar un diseño flexible */
+    align-items: center; /* Centrar verticalmente los elementos */
+}
+
+.form__labeltipo 
+{
+    display: flex; /* Aplicar un diseño flexible */
+    align-items: center; /* Centrar verticalmente los elementos */
+    margin-top: 10px; /* Separación entre esta sección y la siguiente */
+    margin-right: 5px; /* Separación estética entre el label y el radio button */
+}
+  
+  /* Estilos para los iconos de cada grupo */
+  .form__icon 
+{
+    margin-right: 5px; /* Separación entre el icono y el label */
+    width: 20px; /* Ajustar el ancho del icono para que haya espacio suficiente */
+}
+
+.form__iconClose
+{
+  margin-left: 270px;
+  margin-bottom: -25px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.form__iconSatis
+{
+  margin-right: 2px;
+  width: 20px;
+}
+
+.form__iconSatisf
+{
+  
+  margin-left: 18px;
+  width: 20px;
+}
+
+.form__iconEq
+{
+  margin-right: 5px;
+  width: 20px;
+  margin-top: 10px;
+}
+
+.form__iconTel
+{
+  margin-right: 5px;
+  width: 20px;
+  margin-top: -20px;    
+}
+
+/* Estilos para el label de cada grupo */
+.form__labeltip 
+{
+    margin: 0; /* Eliminar el margen predeterminado del label */
+    display: flex; /* Aplicar un diseño flexible al label para controlar el alineado horizontal */
+    align-items: center; /* Centrar verticalmente los elementos dentro del label */
+    margin-left: 25px; /* Corregir el desplazamiento del label */
+    font-size: 14px;
+}
+  
+  /* Estilos para los radio buttons de cada grupo */
+  .form__radio 
+  {
+    margin-left: 10px; /* Separación estética entre el radio button y el label */
+    /*transform: translateY(-1px); /* Posicionar el radio button en la mitad del label */
+    align-items: center;
+    height: 12px;
+	  width: 12px;
+    display: block;
+  }
+
+  .postventa__tip 
+  {
+    display: flex; /* Aplicar un diseño flexible */
+    align-items: center; /* Centrar verticalmente los elementos dentro del contenedor */
+  }
+  
+  /* Estilos para el label de cada grupo */
+  .form__labeltip1 
+  {
+    margin: 0; /* Eliminar el margen predeterminado del label */
+    display: flex; /* Aplicar un diseño flexible al label para controlar el alineado horizontal */
+    align-items: center; /* Centrar verticalmente los elementos dentro del label */
+    margin-right: 31px; /* Separación estética entre el label y el radio button */
+    margin-left: 25px; /* Corregir el desplazamiento del label */
+    font-size: 14px;
+  }
+
+  .tdradio
+  {
+    align-items: center;
+  }
+
+  .form__radio1 
+  {
+   
+    margin-left: 51px;  /* Separación estética entre el radio button y el label */
+    align-items: center;
+    height: 12px;
+	  width: 12px;
+    display: block;
+  }
+  .form__radio2 
+  {
+    margin-left: 20px; /* Separación estética entre el radio button y el label */
+    align-items: center;
+    height: 12px;
+	  width: 12px;
+    display: block;
+  }
+  .form__radio3
+  {
+    
+    margin-left: 110px; /* Separación estética entre el radio button y el label */
+    align-items: center;
+    height: 12px;
+	  width: 12px;
+    display: block;
+  }
+
+  .form__tipp
+  {
+    display: block;
+    height: 2px; /* Ajustar el grosor de la línea */
+    background-color: #2091f9; /* Un color gris claro que complementa el diseño */
+    margin: 15px 0;
+  }
+ 
+  .form__datorden 
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form__labeldat
+  {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-style: italic;
+    font-size: 13px;
+  }
+
+  /* Estilos para la sección de la marca */
+.form__marca {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Separación entre los grupos de label y radio button */
+  }
+  
+  .form__option {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Separación entre el icono y el texto */
+  }
+
+  .form__labelm {
+    margin: 0; /* Eliminamos los márgenes por defecto del label */
+  }
+  
+  .form__radiom {
+    margin: 0; /* Eliminamos los márgenes por defecto del radio button */
+  }
+  
+  /* Estilos para el contenedor principal de la sección */
+.form__plan {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Estilos para cada grupo de label y radio button */
+  .form__labelp {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Separación entre el icono y el texto */
+    margin-right: 15px; /* Separación entre cada grupo de label y radio button */
+  }
+  
+  /* Estilos para los radio buttons */
+  .form__radiop {
+    margin-right: 20px; /* Eliminamos los márgenes por defecto del radio button */
+  }
+
+  .form__cable 
+  {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+  }
+  
+  /* Estilos para cada grupo de label y radio button */
+  .form__labelc 
+  {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Separación entre el icono y el texto */
+    margin-right: 15px; /* Separación entre cada grupo de label y radio button */
+    font-size: 14px;
+  }
+  
+  /* Estilos para los radio buttons */
+  .form__radioc 
+  {
+    margin-right: 20px; /* Eliminamos los márgenes por defecto del radio button */
+  }
+  
+  /* Estilos para el contenedor principal de la sección */
+.form__materiales {
+    display: flex;
+    align-items: center;
+    margin-top: 11px;
+    gap: 10px; /* Separación entre los elementos */
+  }
+  
+  /* Estilos para el título con el icono */
+  .form__oks {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Separación entre el icono y el texto */
+  }
+  
+  /* Estilos para el checkbox */
+  .form__check {
+    margin: 0; /* Eliminamos los márgenes por defecto del checkbox */
+  }
+
+  .form__checks
+  {
+    margin-left: 3px;
+    margin-top: 3px;
+  }
+
+  .form__txtObservaciones
+  {
+    margin-top: 10px;
+    width: 300px;
+    height: 150px;
+  }
+  
+  /* Estilos para el label "OK" */
+  .form__labelmm {
+    margin: 0; /* Eliminamos los márgenes por defecto del label */
+  }
+  .form__datoseries
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form__labele1
+  {
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+
+  .form__tip 
+  {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+  }
+  
+  /* Estilos para cada grupo de label y radio button */
+  .form__labelt 
+  {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Separación entre el icono y el texto */
+    margin-right: 15px; /* Separación entre cada grupo de label y radio button */
+  }
+  
+  /* Estilos para los radio buttons */
+  .form__radiot 
+  {
+    margin-right: 20px; /* Eliminamos los márgenes por defecto del radio button */
+  }
+
+  .form__datoseries
+  {
+    display: flex;
+    margin-top: 12px;
+  }
+  .form__label2
+  {
+    margin-top: 5px;
+    margin-bottom: 5px; 
+  }
+
+  .form__materialesIP 
+  {
+    display: flex;
+    align-items: center;
+    margin-top: 11px;
+    gap: 10px; /* Separación entre los elementos */
+  }
+  
+  /* Estilos para el título con el icono */
+  .form__oks1 {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Separación entre el icono y el texto */
+  }
+  
+  /* Estilos para el checkbox */
+  .form__check1 {
+    margin: 0; /* Eliminamos los márgenes por defecto del checkbox */
+  }
+
+  /* Estilos para el contenedor principal de la sección */
+.form__matextra {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para cada div de materiales adicionales */
+  .form__datoextra {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  /* Estilos para los checkboxes y las etiquetas asociadas */
+  
+  .form__checkd 
+  {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+  }
+
+  .form__labeld
+  {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .form__satisfaccion
+  {
+    margin-top: 10px;
+  }
+
+  .form__submit
+  {
+    background-color: blue; 
+    border: 1px solid;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 120px;
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-right: 26px;
+    
+  }
+
+  .form__submit:hover {
+    background-color:white; 
+    color: #217023;
+    border: 1px solid;
+    border-color: #217023;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form__submit:active{
+    background-color: #217023; 
+    border: 1px solid;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+
+}
+
+  .buttons
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+  }
+
+  .form__columSatisfaccion
+  {
+    margin-left: 23px;
+  }
+
+  .form__columSatisfaccion1
+  {
+    margin-left: 5px;
+  }
+
+  .columm__satis
+  {
+    display: flex;
+    flex-direction: row;
+  }
+  /* Estilos para la línea separadora */
+  
+
+
+  /* Resto de estilos para los elementos del formulario... */
+  
+  /* Estilos para el scrollbar */
+  .form::-webkit-scrollbar {
+    width: 5px; /* Ancho del scrollbar */
+    background-color: #f1f1f1; /* Color de fondo del scrollbar */
+  }
+  
+  .form::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color de la perilla del scrollbar */
+  }

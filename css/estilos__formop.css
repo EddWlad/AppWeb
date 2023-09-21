@@ -1,0 +1,105 @@
+
+/*Contenedor del formulario*/
+.operacion__container 
+{
+    text-align: center;
+    width: 12cm; /* Ancho del contenedor del formulario */
+    height: 10cm; /* Altura del contenedor del formulario */
+    overflow-y: auto; /* Agregamos scroll vertical si el contenido excede el tamaño del contenedor */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Posición del contenedor del formulario en la pantalla */
+/* Puedes ajustar estos valores según tu preferencia */
+.operacion__container 
+{
+    position: absolute;
+    top: 25%; /* Ubicación vertical en la pantalla */
+    left: 50%; /* Ubicación horizontal en la pantalla */
+    transform: translate(-125%, -50%);
+    
+}
+
+/* Título del formulario */
+.form__title 
+{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Párrafo de instrucciones */
+.form__paragraph 
+{
+    margin-bottom: 15px;
+    
+}
+.form__titles
+{
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 8px;
+    margin-left: unset;
+}
+
+.form__oks
+{
+    display: inline-block;
+    margin-bottom: 8px;
+    vertical-align: middle;
+}
+
+/* Iconos en línea con palabras */
+.form__icon 
+{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+/* Etiquetas y campos de entrada en línea */
+.form__label,
+.form__proyect,
+.form__radio,
+.form__check,
+.form__titlemat
+.form__series 
+{
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 8px;
+}
+
+/* Líneas de separación */
+.form__line 
+{
+    display: block;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+/* Estilos para checkboxes y sus etiquetas */
+.form__check,
+.form__label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px; /* Espacio entre los checkboxes y sus etiquetas */
+}
+
+/* Para alinear horizontalmente los checkboxes de las marcas y planes */
+.form__marca input[type="radio"],
+.form__plan input[type="radio"],
+.form__cable input[type="radio"],
+.form__tip input[type="radio"],
+.form__materialesIP input[type="checkbox"],
+.form__satisfaccion input[type="radio"] 
+{
+  margin-right: 5px; /* Espacio entre los checkboxes */
+}
+
+/* Para alinear horizontalmente los checkboxes de los materiales extras */
+.form__matextra input[type="checkbox"] 
+{
+    margin-right: 8px; /* Espacio entre los checkboxes */
+}
+
